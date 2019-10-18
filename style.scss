@@ -3,6 +3,72 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('assets/ProximaNova-Regular.eot');
+  src: url('assets/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('assets/ProximaNova-Regular.woff2') format('woff2'),
+    url('assets/ProximaNova-Regular.woff') format('woff'),
+    url('assets/ProximaNova-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaBookC';
+  src: url('assets/FuturaBookC.eot');
+  src: url('assets/FuturaBookC.eot?#iefix') format('embedded-opentype'),
+    url('assets/FuturaBookC.woff2') format('woff2'),
+    url('assets/FuturaBookC.woff') format('woff'),
+    url('assets/FuturaBookC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaDemiC';
+  src: url('assets/FuturaDemiC.eot');
+  src: url('assets/FuturaDemiC.eot?#iefix') format('embedded-opentype'),
+    url('assets/FuturaDemiC.woff2') format('woff2'),
+    url('assets/FuturaDemiC.woff') format('woff'),
+    url('assets/FuturaDemiC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaMediumC';
+  src: url('assets/FuturaMediumC.eot');
+  src: url('assets/FuturaMediumC.eot?#iefix') format('embedded-opentype'),
+    url('assets/FuturaMediumC.woff2') format('woff2'),
+    url('assets/FuturaMediumC.woff') format('woff'),
+    url('assets/FuturaMediumC.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Yeseva One';
+  src: url('assets/YesevaOne.eot');
+  src: url('assets/YesevaOne.eot?#iefix') format('embedded-opentype'),
+    url('assets/YesevaOne.woff2') format('woff2'),
+    url('assets/YesevaOne.woff') format('woff'),
+    url('assets/YesevaOne.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-logo: FuturaDemiC,
+sans-serif;
+$font-navigation-links: FuturaBookC,
+sans-serif;
+$font-header: Yeseva One,
+sans-serif;
+$primary-color: #000000;
+$second-color: #ffffff;
+$third-color:#E3B873;
+$button-color: #E3B873;
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -11,10 +77,91 @@
 // Header
 
 .header {
-  background: #000000;
+  display: flex;
+  justify-content: space-between;
+  background: $primary-color;
   width: 100%;
   height: 800px;
 }
+
+.header_social {
+  width: 6%;
+}
+
+.header_wrapper {
+  width: 94%;
+}
+
+.header_banner {
+  height: 700px;
+  background: red;
+  background: url(assets/banner.jpg);
+
+  &--main_heding {
+    
+  position: relative;
+    top:50%;
+    font-family: $font-header;
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 132.8%;
+    text-transform: uppercase;
+    color: $second-color;
+    width: 550px;
+
+    &-orange {
+      color: $third-color;
+    }
+  }
+
+  &--main_description {
+    font-family: $font-navigation-links;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    width: 450px;
+    color: $second-color;
+    margin-top: 20px;
+    margin-bottom: 45px;
+  }
+
+  &--cta {
+    width: 207px;
+    height: 51px;
+    background-color: $button-color;
+    border: 0;
+    font-family: $font-logo;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $second-color;
+    cursor: pointer;
+    background: $third-color;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+    border-radius: 2px;
+  }
+
+  &--cta2 {
+    width: 207px;
+    height: 51px;
+    border: 1px solid $second-color;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-family: $font-logo;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $second-color;
+    background: none;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+}
+
+.banner_text {
+  position: relative;
+  top: 27%;
+  left: 4%;
+}
+
 
 // Navigation
 
@@ -24,30 +171,58 @@
   height: 83px;
   margin: auto;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navigation_menu {
   display: flex;
-  list-style: none;
-  color: #ffffff;
-  font-size: 14px;
-}
-
-.banner_wrapper {
-  display: flex;
   justify-content: space-between;
-}
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  color: $second-color;
+  font-size: 14px;
 
-.social {
-  background: #000000;
-  width: 10%;
-}
+  &--logo a {
+    font-family: $font-logo;
+    color: $third-color;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $third-color;
+    margin-right: 40px;
+  }
 
-.header_banner {
-  width: 90%;
-  height: 700px;
-  background: red;
+  &--links a {
+    color: $second-color;
+    font-family: $font-navigation-links;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+
+  }
+
+  &--telefon a {
+    color: $third-color;
+    font-family: $font-logo;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  &--button {
+    width: 161px;
+    height: 37px;
+    background-color: $button-color;
+    margin-right: 100px;
+    border: 0;
+    font-family: $font-logo;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $second-color;
+    cursor: pointer;
+    border-radius: 2px;
+  }
 }
 
 // Slider section
@@ -352,13 +527,14 @@
 
 .team {
   &--heading {
-  text-align: center;
-}
-&--description {
-   text-align: center;
+    text-align: center;
+  }
+
+  &--description {
+    text-align: center;
     width: 60%;
     margin: auto;
-}
+  }
 
 }
 
@@ -386,9 +562,10 @@
   height: 150px;
   background-color: #ffffff;
   bottom: 20px;
+
   &--exp {
     background-color: #E3B873;
-    color:#ffffff;
+    color: #ffffff;
   }
 }
 
@@ -398,13 +575,14 @@
 
 .clients {
   &--heading {
-  text-align: center;
-}
-&--description {
-   text-align: center;
+    text-align: center;
+  }
+
+  &--description {
+    text-align: center;
     width: 60%;
     margin: auto;
-}
+  }
 
 }
 
@@ -432,9 +610,10 @@
   height: 150px;
   background-color: #ffffff;
   bottom: 20px;
+
   &--exp {
     background-color: #E3B873;
-    color:#ffffff;
+    color: #ffffff;
   }
 }
 
@@ -451,16 +630,17 @@
   background-color: #000000;
 }
 
-.contacts_form_footer{
+.contacts_form_footer {
   width: 70%;
   margin: auto;
   color: #ffffff;
-  &--name_phone{
+
+  &--name_phone {
     display: flex;
   }
 }
 
-.contacts{
+.contacts {
   text-align: center;
 }
 
