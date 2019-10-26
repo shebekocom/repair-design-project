@@ -70,6 +70,10 @@ $font-navigation-links: FuturaBookC,
 sans-serif;
 $font-header: Yeseva One,
 sans-serif;
+$font-features: FuturaMediumC,
+sans-serif;
+$font-galery: Proxima Nova,
+sans-serif;
 
 // Colors
 $primary-color: #000000;
@@ -82,6 +86,9 @@ $button-color: $third-color;
 
 .subtitle_white,
 .subtitle_black {
+  font-family: $font-header;
+  font-size: 20px;
+  line-height: 28px;
   text-align: center;
   color: $second-color;
   text-transform: uppercase;
@@ -95,7 +102,7 @@ $button-color: $third-color;
 
 .subtitle_icon {
   position: relative;
-  margin: 30px auto;
+  margin: 15px auto 30px auto;
   width: 200px;
   height: 29px;
 
@@ -662,6 +669,7 @@ $button-color: $third-color;
   display: block;
   text-align: left;
   width: 235px;
+  color: rgba(54, 54, 54, 0.5);
 
   &--label {
     display: block;
@@ -670,7 +678,6 @@ $button-color: $third-color;
     font-weight: normal;
     font-size: 15px;
     line-height: 20px;
-    color: rgba(54, 54, 54, 0.5);
   }
 
   &--input {
@@ -683,7 +690,26 @@ $button-color: $third-color;
     color: #363636;
     border: 0;
     border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+  }
 
+  &--input::placeholder {
+    color: #363636;
+  }
+
+  &--input:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &--input:focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  &--input:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &--input:focus:-ms-input-placeholder {
+    color: transparent;
   }
 
   &--button {
@@ -705,6 +731,7 @@ $button-color: $third-color;
 .form_submit_checkbox {
   margin: 0 auto;
   width: 30%;
+  color: #181818;
 }
 
 .control {
@@ -716,7 +743,6 @@ $button-color: $third-color;
   padding-top: 3px;
   cursor: pointer;
   font-size: 16px;
-  color: #181818;
 
 }
 
@@ -834,8 +860,8 @@ $button-color: $third-color;
     color: $second-color;
     cursor: pointer;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
-    bottom:0px;
-    left:31px;
+    bottom: 0px;
+    left: 31px;
 
     &:hover {
       box-shadow: none;
@@ -878,10 +904,18 @@ $button-color: $third-color;
 // Contact form section
 .contact_form {
   display: flex;
-  width: 90%;
-  height: 725px;
-  background-color: gray;
-  margin-top: 20px;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 142px;
+}
+
+.features {
+  position: relative;
+  background: url(assets/bgfeatures.png) no-repeat;
+  width: 793px;
+  height: 743px;
 }
 
 .features_list {
@@ -889,35 +923,201 @@ $button-color: $third-color;
   list-style: none;
 }
 
-.features_list_item {
+.features_item {
   display: flex;
+  align-items: center;
+  position: absolute;
+  font-family: $font-features;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #363636;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .features_item--number {
+    transition: 0.6s;
+    border: 15px solid $third-color;
+  }
+
+  &--number {
+    background-color: $third-color;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-family: $font-header;
+    font-size: 18px;
+    line-height: 41px;
+    text-align: center;
+    color: $second-color;
+    border: 15px solid $second-color;
+  }
+
+  &--text {
+    width: 85%;
+
+    &-two {
+      width: 60%;
+    }
+
+    &-three {
+      width: 60%;
+    }
+
+    &-last {
+      width: 75%;
+    }
+  }
+
+  &:first-child {
+    margin: 103px 0px 0px 344px;
+    width: 440px;
+  }
+
+  &:nth-child(2) {
+    margin: 212px 0px 0px 418px;
+    width: 250px;
+  }
+
+  &:nth-child(3) {
+    margin: 375px 0px 0px 441px;
+    width: 250px;
+  }
+
+  &:last-child {
+    margin: 536px 0px 0px 376px;
+    width: 300px;
+  }
 }
 
-.features_list--number {
-  display: block;
-  background-color: $third-color;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
 
-.features_list--text {
-  display: block;
+
+.c_form_container {
+  background-color: #000000;
+  color: $second-color;
+  background: #131313;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+  width: 506px;
+  height: 506px;
+  margin: 24px 100px 43px 0px;
 }
 
 .c_form {
-  background-color: #000000;
-  color: #ffffff;
+  width: 408px;
+  margin: 0 auto;
 
-  &--discont {
-    display: flex;
-    background-color: #ffffff;
-    color: $third-color;
+  &--title {
+    font-family: $font-logo;
+    margin: 26px auto 20px auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    width: 290px;
+    color: $second-color;
+  }
 
-    &-icon {
-      width: 30px;
-      height: 30px;
-    }
+  &--label {
+    display: block;
+    font-family: $font-navigation-links;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 35px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &--input {
+    font-family: $font-navigation-links;
+    font-style: normal;
+    width: 408px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 35px;
+    color: $second-color;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+  }
+
+  &--input::placeholder {
+    color: $second-color;
+  }
+
+  &--input:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &--input:focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  &--input:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &--input:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+
+  &--button {
+    width: 213px;
+    height: 51px;
+    margin-top: 38px;
+    margin-bottom: 13px;
+    background-color: $button-color;
+    border: 0;
+    font-family: $font-logo;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $second-color;
+    cursor: pointer;
+    float: right;
+  }
+
+  &--checkbox {
+    font-family: $font-navigation-links;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: $second-color;
+    margin-top: 15px;
+  }
+}
+
+.discont {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  color: $third-color;
+  bottom: 15px;
+  right: 257px;
+  font-family: $font-logo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+
+  &--icon {
+    background: url(assets/discon_icon.png) no-repeat;
+    background-position: center;
+    width: 72px;
+    height: 72px;
+    background-color: $third-color;
+    border-radius: 50%;
+  }
+
+  &--text {
+    width: 225px;
+    margin-left: 20px;
   }
 }
 
@@ -925,53 +1125,114 @@ $button-color: $third-color;
 // Galery section
 
 .galery {
-  display: flex;
+  display: block;
+  position: relative;
   background-color: #000000;
+  background: url(assets/fon-galery.jpg) no-repeat;
+  background-position: 0px 111px;
   color: #ffffff;
+  width: 100%;
+  margin-top: 112px;
 }
 
-.galery_navigation {
-  width: 50%;
-  height: 500px;
-  border: 1px solid #ffffff;
+.galery_container {
+  display: block;
+  width: 25%;
+  height: 740px;
+  padding-left: 99px;
+  padding-top: 247px;
+
+  &--title {
+    font-family: $font-header;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: $third-color;
+    width: 280px;
+  }
 
   &--list {
     list-style: none;
+    margin-top: 38px;
 
-    &-hover {
+    &-link {
+      display: block;
+      margin-bottom: 15px;
+      color: $second-color;
+      text-decoration: none;
+      font-family: $font-galery;
+      font-family: Proxima Nova;
+      font-size: 20px;
+      line-height: 34px;
+      cursor: pointer;
+    }
+
+    &-active {
+      display: inline-block;
+      cursor: pointer;
+      margin-bottom: 15px;
       color: $third-color;
-      text-decoration: underline;
+      text-decoration: none;
+      font-family: $font-galery;
+      font-family: Proxima Nova;
+      font-size: 20px;
+      line-height: 34px;
+      border-bottom: 1px solid $third-color;
     }
   }
 }
 
 .galery_photo {
   display: flex;
+  position: absolute;
+  height: 1020px;
+  top: 0px;
+  right: 7%;
 }
 
-.galery_photo_column {
-  width: 50%;
-  height: 500px;
+.photo_column_left {
+  margin-top: 71px;
 
-  &--img {
-    width: 50px;
-    height: 100px;
+
+  &--photo1 {
+    margin-bottom: 35px;
   }
+
+  &--photo2 {}
+}
+
+.photo_column_right {
+
+  margin-left: 43px;
+
+
+  &--photo1 {
+    margin-bottom: 31px;
+  }
+
+  &--photo2 {}
+
 }
 
 
 // Price design project section
 
 .design_project {
-  &--heading {
-    text-align: center;
-  }
+  margin-top: 142px;
 
   &--description {
     text-align: center;
     width: 60%;
     margin: auto;
   }
+}
+
+.design_icon {
+  background: url(assets/design-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 
