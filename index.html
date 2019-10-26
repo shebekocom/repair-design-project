@@ -113,27 +113,44 @@
     </section>
 
     <section class="video_wrapper">
-      <h2 class="heading_video">online control</h2>
-      <div class="video">
-
+      <h2 class="subtitle_white">online control</h2>
+      <div class="subtitle_icon video_icon"></div>
+      <div class="video_container">
+<video src="#" class="video" poster="assets/video_poster.jpg"></video>
+<a class="video_container--play" href="#"><svg class="video_container--play-arrow" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 13L7.65417e-07 25.1244L1.82536e-06 0.875644L21 13Z" fill="white"/>
+</svg></a>
       </div>
       <div class="video_description">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
-        obcaecati perspiciatis aspernatur, voluptas soluta eligendi, fugiat ut
-        quae animi et odio voluptatem eum veniam, ad consequatur enim minima
-        iste officiis?
+        At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast from one of our facilities!
+ <br> Leave a request below and you will receive a link to the broadcast.
       </div>
+      <form action="">
       <div class="form_submit">
-        <input type="text" />
-        <input type="text" />
-        <button>SUBMIT</button>
+        <div class="form_submit_block">
+          <label class="form_submit_block--label" for="form_submit_name">Name</label>
+          <input class="form_submit_block--input" type="text" id="form_submit_name" placeholder="What is your name:" />
+        </div>
+        <div class="form_submit_block">
+          <label class="form_submit_block--label" for="form_submit_phone">Phone</label>
+          <input class="form_submit_block--input" type="text" id="form_submit_phone" placeholder="Your phone number:" />
+        </div>
+        <button class="form_submit_block--button">Submit</button>
       </div>
-      <p class="checkbox"><input type="checkbox">
-        I agree to the processing of personal data</p>
+      <div class="form_submit_checkbox">
+        <label class="control control-checkbox">
+            I agree to the processing of personal data
+            <input type="checkbox" checked="checked" />
+            <div class="control_indicator"></div>
+        </label>
+        </div>
+        </form>
     </section>
-
+      
     <section class="price_container">
-      <h2 class="hedding_price">TYPES OF REPAIR</h2>
+      <h2 class="subtitle_black">TYPES OF REPAIR</h2>
+      <div class="subtitle_icon repair_icon"></div>
+      <h2 class="hedding_price"></h2>
       <div class="price_wrapper">
         <div class="price_card">
           <div class="card_description">
@@ -147,8 +164,8 @@
               <li>Replacing sockets and switches</li>
               <li>Replacing doors</li>
             </ul>
-            <button class="purchase">from 900 rub / m2</button>
           </div>
+           <button class="price_card--button">from 900 rub / m2</button>
         </div>
 
         <div class="price_card">
@@ -163,8 +180,8 @@
               <li>Replacing sockets and switches</li>
               <li>Replacing doors</li>
             </ul>
-            <button class="purchase">from 1800 rub / m2</button>
           </div>
+          <button class="price_card--button">from 1800 rub / m2</button>
         </div>
 
         <div class="price_card">
@@ -179,8 +196,8 @@
               <li>Replacing sockets and switches</li>
               <li>Replacing doors</li>
             </ul>
-            <button class="purchase">from 4000 rub / m2</button>
           </div>
+          <button class="price_card--button">from 4000 rub / m2</button>
         </div>
       </div>
     </section>
@@ -344,7 +361,7 @@
         <img src="" alt="photo" class="steps--img">
 
       </div>
-  </div>
+  
 
   </section>
 
