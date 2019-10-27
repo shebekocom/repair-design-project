@@ -1221,13 +1221,61 @@ $button-color: $third-color;
 
 .design_project {
   margin-top: 142px;
+     height: 950px;
+     background: linear-gradient(to top, #000000 50%, #ffffff 50%);
 
   &--description {
     text-align: center;
     width: 60%;
     margin: auto;
+    font-family: $font-navigation-links;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    width: 665px;
   }
 }
+
+.design_project> 
+.price_wrapper>
+.price_card:nth-child(1)> 
+.card_description {
+  height: 215px;
+  bottom:91px;
+}
+
+.design_project> 
+.price_wrapper>
+.price_card:nth-child(3)> 
+.card_description {
+  height: 415px;
+  bottom:-110px;
+}
+
+.purchase {
+    position: absolute;
+    width: 228px;
+    height: 54px;
+    background-color: $button-color;
+    margin-top: 22px;
+    margin-right: 100px;
+    border: 0;
+    font-family: $font-header;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: $second-color;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+    bottom: -20px;
+    left: 0px;
+
+    &:hover {
+      box-shadow: none;
+    }
+}
+
 
 .design_icon {
   background: url(assets/design-icon.png);
