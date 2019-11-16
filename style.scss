@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -260,7 +261,7 @@ $button-color: $third-color;
   position: absolute;
   width: 247px;
   height: 97px;
-  bottom: 0px;
+  bottom: -25px;
   background-color: $primary-color;
   font-family: $font-header;
   font-style: normal;
@@ -594,10 +595,11 @@ $button-color: $third-color;
 
 .video_container {
   position: relative;
-  width: 57%;
+  width: 817px;
+  // height: 434px;
   background: gray;
   margin: 0 auto;
-  border: 1px solid black;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
 
   &:after {
     display: block;
@@ -946,8 +948,8 @@ $button-color: $third-color;
 
   &--number {
     background-color: $third-color;
-    width: 42px;
-    height: 42px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     font-family: $font-header;
     font-size: 18px;
@@ -1138,7 +1140,7 @@ $button-color: $third-color;
 .galery_container {
   display: block;
   width: 25%;
-  height: 740px;
+  height: 975px;
   padding-left: 99px;
   padding-top: 247px;
 
@@ -1221,8 +1223,8 @@ $button-color: $third-color;
 
 .design_project {
   margin-top: 142px;
-     height: 950px;
-     background: linear-gradient(to top, #000000 50%, #ffffff 50%);
+  height: 950px;
+  background: linear-gradient(to top, #000000 50%, #ffffff 50%);
 
   &--description {
     text-align: center;
@@ -1237,43 +1239,37 @@ $button-color: $third-color;
   }
 }
 
-.design_project> 
-.price_wrapper>
-.price_card:nth-child(1)> 
-.card_description {
+.design_project>.price_wrapper>.price_card:nth-child(1)>.card_description {
   height: 215px;
-  bottom:91px;
+  bottom: 91px;
 }
 
-.design_project> 
-.price_wrapper>
-.price_card:nth-child(3)> 
-.card_description {
+.design_project>.price_wrapper>.price_card:nth-child(3)>.card_description {
   height: 415px;
-  bottom:-110px;
+  bottom: -110px;
 }
 
 .purchase {
-    position: absolute;
-    width: 228px;
-    height: 54px;
-    background-color: $button-color;
-    margin-top: 22px;
-    margin-right: 100px;
-    border: 0;
-    font-family: $font-header;
-    font-size: 18px;
-    line-height: 25px;
-    text-transform: uppercase;
-    color: $second-color;
-    cursor: pointer;
-    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
-    bottom: -20px;
-    left: 0px;
+  position: absolute;
+  width: 228px;
+  height: 54px;
+  background-color: $button-color;
+  margin-top: 22px;
+  margin-right: 100px;
+  border: 0;
+  font-family: $font-header;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: $second-color;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  bottom: -20px;
+  left: 0px;
 
-    &:hover {
-      box-shadow: none;
-    }
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 
@@ -1288,35 +1284,172 @@ $button-color: $third-color;
 
 .steps_wrapper {
   display: flex;
+  justify-content: flex-start;
   width: 100%;
   height: 700px;
-  align-items: center;
+  align-items: flex-start;
   background: #000000;
 }
 
 .steps_description {
+  position: relative;
+  top: -48px;
   width: 40%;
-  height: 600px;
-  background: gray;
+  padding-left: 98px;
+
+  &--caption {
+    font-family: $font-logo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: $second-color;
+  }
+
+  &--heading {
+    font-family: $font-header;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 37px;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    color: $third-color;
+    width: 140px;
+    margin: 22px 0px 20px 0px;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: "";
+      font-size: 2px;
+      background-color: $third-color;
+      width: 91px;
+      height: 1px;
+      top: 90px;
+      left: 306px;
+    }
+  }
+
+  &--pages {
+    font-family: $font-header;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: $second-color;
+    margin-top: 81px;
+  }
+
+  &--subcaption {
+    font-family: $font-header;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: $third-color;
+    width: 250px;
+    margin-top: 18px;
+  }
+
+  &--text {
+    font-family: $font-navigation-links;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    color: $second-color;
+    margin-top: 10px;
+    width: 350px;
+  }
+
+  &--navigation {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+
+    &-arrow_left {
+      width: 42px;
+      height: 14px;
+      margin-top: 4px;
+    }
+
+    &-activ_point {
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $second-color;
+    }
+
+    &-point {
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $second-color2;
+    }
+
+    &-arrow_right {
+      width: 42px;
+      height: 14px;
+      transform: rotate(180deg);
+      margin-top: 4px;
+    }
+  }
 }
 
 .steps {
   width: 60%;
-  height: 600px;
-  background: gray;
 }
 
 .steps_navigation {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
-  height: 40px;
   list-style: none;
+  margin-top: 50px;
 
   &--links {
-    &-active {
-      text-decoration: underline;
+    color: gray;
+    width: 217px;
+    margin-bottom: 40px;
+    cursor: pointer;
+
+    &-number {
+      width: 17px;
+      border-bottom: 1px solid $third-color;
+      font-family: $font-header;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 21px;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      font-family: $font-navigation-links;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      margin-top: 5px;
+      width: 110px;
     }
   }
+
+  &--links:hover {
+    color: $second-color;
+  }
+}
+
+.steps_active {
+  color: $second-color;
 }
 
 .steps_container {
@@ -1344,64 +1477,160 @@ $button-color: $third-color;
   display: flex;
 }
 
+.steps_img {
+  margin-top: 14px;
+}
+
 // Team section
 
+
 .team {
-  &--heading {
-    text-align: center;
-  }
+  width: 100%;
+  background: linear-gradient(to bottom, $primary-color 50%, $second-color 50%);
+  padding-top: 40px;
 
   &--description {
+    font-family: $font-navigation-links;
+    width: 500px;
+    font-size: 20px;
+    line-height: 34px;
     text-align: center;
-    width: 60%;
-    margin: auto;
+    color: $primary-color;
+    margin: 0 auto;
   }
 
+  &--line {
+    width: 55px;
+    border: 1px solid #E3B873;
+    margin: 55px auto 9px auto;
+  }
+
+}
+
+.team_icon {
+  background: url(assets/team_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .team_wrapper {
   display: flex;
+  justify-content: space-between;
   position: relative;
-  justify-content: center;
-  width: 100%;
-  height: 400px;
+  width: 76%;
   align-items: center;
-  top: 30px;
+  margin: auto;
+  margin-top: 20px;
 }
 
 .team_card {
   position: relative;
-  margin: 10px;
-  width: 20%;
-  height: 300px;
-  background-color: gray;
+  width: 337px;
+  height: 450px;
+
+
+  &:nth-child(1) {
+    background: url(assets/team_photo1.png) no-repeat;
+    background-position: top 36px right 30px;
+
+  }
+
+  &:nth-child(2) {
+    background: url(assets/team_photo2.png) no-repeat;
+    background-position: top 36px right 30px;
+
+  }
+
+  &:nth-child(3) {
+    background: url(assets/team_photo3.png) no-repeat;
+    background-position: top 36px right 30px;
+  }
+
+  &--img {
+    width: 70px;
+    height: 70px;
+    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
+  }
+
+  &--description {
+    position: absolute;
+    width: 233px;
+    height: 137px;
+    background-color: #ffffff;
+    left: 53px;
+    bottom: 0px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+
+    &-header {
+      font-family: $font-header;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    &-job {
+      font-family: $font-navigation-links;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      color: #959595;
+      margin-top: 5px;
+
+    }
+
+    &-exp {
+      background-color: $third-color;
+      font-family: $font-header;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 43px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-top: 21px;
+    }
+  }
+
+
 }
 
-.team_card_description {
-  position: absolute;
-  width: 95%;
-  height: 150px;
-  background-color: #ffffff;
-  bottom: 20px;
+.team_card:nth-child(1) .team_card--img {
+  background: url(assets/team_photo_icon1.png) no-repeat;
+}
 
-  &--exp {
-    background-color: $third-color;
-    color: #ffffff;
-  }
+.team_card:nth-child(2) .team_card--img {
+  background: url(assets/team_photo_icon2.png) no-repeat;
+}
+
+.team_card:nth-child(3) .team_card--img {
+  background: url(assets/team_photo_icon3.png) no-repeat;
 }
 
 
 
 // Cliets section
 
+.clients_icon {
+  background: url(assets/cliets-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .clients {
-  &--heading {
-    text-align: center;
-  }
+  margin-top: 95px;
 
   &--description {
+    font-family: $font-navigation-links;
+    font-size: 20px;
+    line-height: 27px;
     text-align: center;
-    width: 60%;
+    text-align: center;
+    width: 25%;
     margin: auto;
   }
 
@@ -1410,33 +1639,82 @@ $button-color: $third-color;
 .clients_wrapper {
   display: flex;
   position: relative;
-  justify-content: center;
-  width: 100%;
-  height: 400px;
+  justify-content: space-between;
+  width: 87%;
   align-items: center;
-  top: 30px;
+  margin: auto;
+  margin-top: 40px;
 }
 
 .clients_card {
   position: relative;
   margin: 10px;
-  width: 20%;
-  height: 300px;
-  background-color: gray;
-}
+  width: 376px;
+  height: 428px;
+  background-color: $second-color;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
 
-.clients_card_description {
-  position: absolute;
-  width: 95%;
-  height: 150px;
-  background-color: #ffffff;
-  bottom: 20px;
+  &--title {
+    display: flex;
 
-  &--exp {
-    background-color: #E3B873;
-    color: #ffffff;
+    &-photo {
+      margin: 23px 0px 0px 20px;
+    }
+
+    &-name {
+      font-family: $font-header;
+      font-size: 18px;
+      line-height: 23px;
+      width: 170px;
+      margin: 38px 0px 0px 24px;
+    }
+
   }
+
+  &--text {
+    font-family: $font-navigation-links;
+    font-size: 15px;
+    line-height: 180%;
+    width: 325px;
+    text-transform: lowercase;
+    color: #959595;
+    margin: 12px 0px 0px 21px;
+  }
+
+  &--project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -26px;
+    width: 294px;
+    height: 54px;
+    background-color: $third-color;
+    font-family: $font-header;
+    font-size: 17px;
+    line-height: 55px;
+    color: $second-color;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+
+    &-metrs {
+      background: url(assets/icons-metrs.png) no-repeat;
+      background-position: top 11px left 18px;
+      width: 130px;
+      padding-left: 65px;
+    }
+
+    &-days {
+      background: url(assets/icons-days.png) no-repeat;
+      background-position: top 11px left 18px;
+      width: 130px;
+      border-left: 1px solid $second-color;
+      width: 164px;
+      padding-left: 69px;
+    }
+  }
+
 }
+
 
 .clients_project {
   display: flex;
@@ -1446,35 +1724,140 @@ $button-color: $third-color;
 //Contacts sections
 .contacts_form_footer_wrapper {
   margin: auto;
-  width: 50%;
-  height: 400px;
+  width: 62%;
+  height: 450px;
   background-color: #000000;
 }
 
 .contacts_form_footer {
-  width: 70%;
+  width: 55%;
   margin: auto;
-  color: #ffffff;
+  color: $second-color;
+
+  &--heading {
+    font-family: $font-header;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 34px;
+    color: #FFFFFF;
+  }
 
   &--name_phone {
     display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    width: 100%;
+
+    &-label {
+      display: block;
+      font-family: $font-navigation-links;
+      font-size: 15px;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &-input {
+      font-family: $font-navigation-links;
+      width: 90%;
+      font-size: 18px;
+      line-height: 30px;
+      color: #ffffff;
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+      margin-bottom: 40px;
+    }
+
+    &-input::placeholder {
+      color: $second-color;
+    }
+
+    &-input:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    &-input:focus:-moz-placeholder {
+      color: transparent;
+    }
+
+    &-input:focus::-moz-placeholder {
+      color: transparent;
+    }
+
+    &-input:focus:-ms-input-placeholder {
+      color: transparent;
+    }
+
   }
+
+  &--checkbox {
+    width: 300px;
+    margin: auto;
+  }
+
+  &--button {
+    width: 200px;
+    height: 51px;
+    background: #E3B873;
+    margin-top: 44px;
+    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+    border: 0;
+    font-family: $font-logo;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #FFFFFF;
+  }
+}
+
+.size-form_footer-input {
+  width: 100%;
+}
+
+.contacts_form_footer_item {
+  width: 96%;
+  text-align: left;
 }
 
 .contacts {
   text-align: center;
+  margin-top: 150px;
+  background: linear-gradient(to top, #1D1D1D 80%, #ffffff 20%);
+}
+
+.contacts_adress {
+  text-align: center;
+  margin: auto;
+  margin-top: 49px;
+  width: 40%;
+  font-family: Yeseva One, sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #E3B873;
+}
+
+.contacts_icons{
+  margin-top: 40px;
 }
 
 .map {
-  width: 500px;
-  height: 400px;
+  width: 70%;
+  margin: 50px auto;
 }
 
 // Footer
 
 .footer {
   background-color: #000000;
-  height: 50px;
   width: 100%;
+  height: 100px;
   margin: auto;
+  padding-left: 50px;
 }
